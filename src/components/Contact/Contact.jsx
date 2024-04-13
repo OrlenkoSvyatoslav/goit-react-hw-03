@@ -1,11 +1,11 @@
-const Contact = ({ contact }) => {
+const Contact = ({ contact, onDelete }) => {
   return (
     <>
       <div>
         <p>{contact.name}</p>
         <p>{contact.number}</p>
       </div>
-      <button>Delete</button>
+      <button onClick={() => onDelete(contact.id)}>Delete</button>
     </>
   );
 };
